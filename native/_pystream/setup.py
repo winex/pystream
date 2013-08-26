@@ -18,7 +18,10 @@ setup(name='_pystream',
 	version='1.0',
 	author='Nick Bray',
 	ext_modules=[
-		Extension('_pystream', ['_pystream.cpp'])
+		Extension(
+			'_pystream', ['_pystream.cpp'],
+			extra_compile_args = ['-fpermissive'],
+			)
 		]
 	)
 
